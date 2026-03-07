@@ -6,23 +6,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * added 7.3.26
  */
 public class Player extends Actor{
-    int posX;
-    int posY;
-    
     // Variabeln für Animation
     private GreenfootImage[] idleImages;
+    private GreenfootImage[] moveImages;
     private int frame = 0; // Aktueller Frame
-    private int animationDelay = 10; // Geschwindigkeit
     private int animationTimer = 0; // Bremst die Geschwindigkeit
-    private int count = 0;
     
     public Player(String spriteColour){
-        idleImages = new GreenfootImage[3]; // Anzahl der Bilder in der Animation
+        // Anzahl der Bilder in der Animation
+        idleImages = new GreenfootImage[3];
+        moveImages = new GreenfootImage[6];
         
         // laden der Bilder
         for (int i = 0; i < idleImages.length; i++){
-            idleImages[i] = new GreenfootImage(spriteColour + "_idle_" + i + ".png");
+            idleImages[i] = new GreenfootImage("player/idle/" + spriteColour + "_" + i + ".png");
             idleImages[i].scale(48, 48); // verändert die Größe beim Laden der Spielfigur
+        }
+        for (int i = 0; i < moveImages.length; i++){
+            moveImages[i] = new GreenfootImage("player/move/" + spriteColour + "_" + i + ".png");
+            moveImages[i].scale(48, 48); // verändert die Größe beim Laden der Spielfigur
         }
     }
     
