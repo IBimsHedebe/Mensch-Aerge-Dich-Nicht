@@ -11,6 +11,7 @@ public class Tile_Map extends Actor
     
     public Tile_Map(String color){
         tileColor = new GreenfootImage("Map/" + color + ".png");
+        tileColor.scale(48,48);
         setImage(tileColor);
     }
     
