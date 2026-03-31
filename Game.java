@@ -257,5 +257,36 @@ public class Game extends World
         blank_Tile_Map.setLocation(4,1);
         Black_Tile_Map black_Tile_Map10 = new Black_Tile_Map();
         addObject(black_Tile_Map10,4,1);
+        blank_Tile_Map16.setLocation(1,9);
+        blank_Tile_Map16.setLocation(0,8);
+        blank_Tile_Map16.setLocation(1,8);
+        removeObject(blank_Tile_Map16);
+        green_Tile_Map11.setLocation(1,8);
+        blank_Tile_Map11.setLocation(1,3);
+        blank_Tile_Map11.setLocation(0,4);
+        removeObject(blank_Tile_Map46);
+        removeObject(black_Tile_Map5);
+        blank_Tile_Map.setLocation(3,1);
+        blank_Tile_Map.setLocation(4,1);
+        removeObject(blank_Tile_Map);
+        black_Tile_Map10.setLocation(4,1);
+        blank_Tile_Map42.setLocation(8,0);
+        blank_Tile_Map42.setLocation(9,1);
+        removeObject(blue_Tile_Map5);
+        removeObject(blank_Tile_Map43);
+        blank_Tile_Map36.setLocation(11,3);
+        removeObject(blank_Tile_Map36);
+        blue_Tile_Map10.setLocation(11,4);
+        blank_Tile_Map32.setLocation(12,8);
+        blank_Tile_Map32.setLocation(11,9);
+        blank_Tile_Map32.setLocation(12,9);
+        removeObject(white_Tile_Map5);
+        removeObject(green_Tile_Map5);
+        removeObject(blank_Tile_Map44);
+        blank_Tile_Map32.setLocation(11,8);
+        blank_Tile_Map26.setLocation(8,11);
+        removeObject(blank_Tile_Map26);
+        removeObject(green_Tile_Map6);
+        removeObject(blank_Tile_Map45);
     }
 }
