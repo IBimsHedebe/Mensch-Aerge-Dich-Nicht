@@ -288,5 +288,6 @@ public class Game extends World
         removeObject(blank_Tile_Map26);
         removeObject(green_Tile_Map6);
         removeObject(blank_Tile_Map45);
+        blank_Tile_Map11.setLocation(1,4);
     }
 }
