@@ -10,7 +10,7 @@ public class Game extends World
     private static int tileGröße = 50;
     public Game()
     {    
-        super(13,13,tileGröße);
+        super(13,15,tileGröße);
         Greenfoot.setSpeed(50);
         prepare();
     }
