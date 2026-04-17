@@ -26,6 +26,8 @@ public class Player extends Actor{
             moveImages[i] = new GreenfootImage("player/move/" + spriteColour + "_" + i + ".png");
             moveImages[i].scale(48, 48); // verändert die Größe beim Laden der Spielfigur
         }
+        
+        setImage(idleImages[1]); // Erstellt ein Start Bild
     }
     
     public void act(){
