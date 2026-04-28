@@ -18,27 +18,27 @@ public class Dice extends Actor
         rollImages = new GreenfootImage[6];
         
         // Lade Bilder
-        idleImages[1] = new GreenfootImage("dice/" + "dice" + ".png");
-        idleImages[1].scale(48, 48); // verändert die Größe beim Laden der Spielfigur
+        idleImages[0] = new GreenfootImage("dice/dice.png");
+        idleImages[0].scale(48, 48); // verändert die Größe beim Laden der Spielfigur
         
         for (int i = 0; i < rollImages.length; i++){
             rollImages[i] = new GreenfootImage("dice/" + i + ".png");
             rollImages[i].scale(48, 48); // verändert die Größe beim Laden der Spielfigur
         }
         
-        setImage(idleImages[1]);
+        setImage(idleImages[0]);
     }
     
     public void act()
     {
-        if (Greenfoot.mouseClicked(Dice.class)){
-            randomNumber = Greenfoot.getRandomNumber(6) + 1;
+        if (Greenfoot.mouseClicked(this)){
+            randomNumber = Greenfoot.getRandomNumber(6);
             animate();
         }
         
     }
     
     public void animate(){
-        
+        setImage(rollImages[randomNumber]);
     }
 }
