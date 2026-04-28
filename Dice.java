@@ -12,6 +12,8 @@ public class Dice extends Actor
     public GreenfootImage[] idleImages;
     public GreenfootImage[] rollImages;
     
+    public boolean diceRolled = false;
+    
     public Dice(){
         // Anzahl Bilder
         idleImages = new GreenfootImage[1];
@@ -33,12 +35,8 @@ public class Dice extends Actor
     {
         if (Greenfoot.mouseClicked(this)){
             randomNumber = Greenfoot.getRandomNumber(6);
-            animate();
+            setImage(rollImages[randomNumber]);
+            diceRolled = true;
         }
-        
-    }
-    
-    public void animate(){
-        setImage(rollImages[randomNumber]);
     }
 }
