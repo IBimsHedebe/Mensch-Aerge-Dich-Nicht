@@ -10,7 +10,7 @@ public class Game extends World
     private static int tileGröße = 50;
     public Game()
     {    
-        super(13,13,tileGröße);
+        super(13,15,tileGröße);
         Greenfoot.setSpeed(50);
         prepare();
     }
@@ -290,5 +290,7 @@ public class Game extends World
         removeObject(blank_Tile_Map45);
         blank_Tile_Map11.setLocation(1,4);
         blank_Tile_Map42.setLocation(8,1);
+        Dice dice = new Dice();
+        addObject(dice,6,13);
     }
 }
