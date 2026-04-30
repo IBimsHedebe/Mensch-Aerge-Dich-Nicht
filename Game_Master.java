@@ -1,23 +1,39 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * made by Ole
  * 
  * added 28.04.26
  */
-public class Game_Master extends Actor
+public class Game_Master
 {
-    private int aktivPlayer = 0;
-    private String[] playerColour = {"Black", "Blue", "Green", "White"};
+    private List <Player> spielerListe;
+    private int aktiverSpielerIndex = 0;
+
+    public Game_Master(List <Player> spieler) {
+        this.spielerListe = spieler;
+    }
+
+    // Diese Methode wird aufgerufen, wenn das Würfeln beendet ist
+    public void naechsterSpieler() {
+        // Index erhöhen und bei Erreichen der Spieleranzahl zurück auf 0 setzen
+        aktiverSpielerIndex = (aktiverSpielerIndex + 1) % spielerListe.size();
+        
+        Player aktuellerPlayer = getAktiverSpieler();
+        System.out.println("Spieler " + aktiverSpielerIndex + " ist jetzt dran!");
+    }
+
+    public Player getAktiverSpieler() {
+        return spielerListe.get(aktiverSpielerIndex);
+    }
     
-    // Referenz zum Würfel
-    Dice dice = (Dice) getWorld().getObjects(Dice.class).get(0);
-    
-    public void act()
-    {
-        if(dice.diceRolled){
-            aktivPlayer = (aktivPlayer + 1) % 4;
-            dice.diceRolled = false;
-        }
+    public void verarbeiteWurf(int wurfErgebnis) {
+        Player p = getAktiverSpieler();
+        int aktuellePosition = p.getPosition(); // Getter im Actor
+        p.setPosition(aktuellePosition + wurfErgebnis); // Setter im Actor
+        
+        naechsterSpieler(); // Danach zum nächsten Spieler wechseln
     }
 }
