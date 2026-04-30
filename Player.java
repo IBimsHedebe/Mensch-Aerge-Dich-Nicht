@@ -45,4 +45,16 @@ public class Player extends Actor{
         }
     }
     
+    
+    private int position = 0; // Die Variable für das Feld, auf dem der Spieler steht
+    
+    public int getPosition() {
+        return position;
+    }
+    
+    public void setPosition(int neuePosition) {
+        this.position = neuePosition;
+        // Hier könntest du auch direkt den Actor auf dem Bildschirm bewegen:
+        // setLocation(x, y); 
+    }
 }
