@@ -21,274 +21,115 @@ public class Game extends World
      */
     private void prepare()
     {
-        Black_Tile_Map black_Tile_Map = new Black_Tile_Map();
-        addObject(black_Tile_Map,1,1);
-        Black_Tile_Map black_Tile_Map2 = new Black_Tile_Map();
-        addObject(black_Tile_Map2,1,2);
-        Black_Tile_Map black_Tile_Map3 = new Black_Tile_Map();
-        addObject(black_Tile_Map3,2,2);
-        Black_Tile_Map black_Tile_Map4 = new Black_Tile_Map();
-        addObject(black_Tile_Map4,2,1);
-        Blank_Tile_Map blank_Tile_Map = new Blank_Tile_Map();
-        addObject(blank_Tile_Map,4,1);
-        Blank_Tile_Map blank_Tile_Map2 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map2,4,2);
-        Blank_Tile_Map blank_Tile_Map3 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map3,5,1);
-        Blank_Tile_Map blank_Tile_Map4 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map4,6,1);
-        Blank_Tile_Map blank_Tile_Map5 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map5,7,1);
-        Blank_Tile_Map blank_Tile_Map6 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map6,4,3);
-        Blank_Tile_Map blank_Tile_Map7 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map7,4,3);
-        Blank_Tile_Map blank_Tile_Map8 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map8,4,4);
-        Blank_Tile_Map blank_Tile_Map9 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map9,3,4);
-        Blank_Tile_Map blank_Tile_Map10 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map10,2,4);
-        Blank_Tile_Map blank_Tile_Map11 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map11,1,4);
-        Blank_Tile_Map blank_Tile_Map12 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map12,1,5);
-        Blank_Tile_Map blank_Tile_Map13 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map13,1,6);
-        Blank_Tile_Map blank_Tile_Map14 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map14,1,7);
-        blank_Tile_Map14.setLocation(1,7);
-        Blank_Tile_Map blank_Tile_Map15 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map15,1,7);
-        Blank_Tile_Map blank_Tile_Map16 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map16,1,8);
-        Blank_Tile_Map blank_Tile_Map17 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map17,2,8);
-        Blank_Tile_Map blank_Tile_Map18 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map18,3,8);
-        Blank_Tile_Map blank_Tile_Map19 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map19,4,8);
-        Blank_Tile_Map blank_Tile_Map20 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map20,4,9);
-        Blank_Tile_Map blank_Tile_Map21 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map21,4,10);
-        Blank_Tile_Map blank_Tile_Map22 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map22,4,11);
-        Blank_Tile_Map blank_Tile_Map23 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map23,5,11);
-        Blank_Tile_Map blank_Tile_Map24 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map24,6,11);
-        Blank_Tile_Map blank_Tile_Map25 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map25,7,11);
-        Blank_Tile_Map blank_Tile_Map26 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map26,8,11);
-        Blank_Tile_Map blank_Tile_Map27 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map27,8,10);
-        Blank_Tile_Map blank_Tile_Map28 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map28,8,9);
-        Blank_Tile_Map blank_Tile_Map29 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map29,8,8);
-        Blank_Tile_Map blank_Tile_Map30 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map30,9,8);
-        Blank_Tile_Map blank_Tile_Map31 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map31,10,8);
-        Blank_Tile_Map blank_Tile_Map32 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map32,11,8);
-        Blank_Tile_Map blank_Tile_Map33 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map33,11,7);
-        Blank_Tile_Map blank_Tile_Map34 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map34,11,6);
-        Blank_Tile_Map blank_Tile_Map35 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map35,11,5);
-        Blank_Tile_Map blank_Tile_Map36 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map36,11,4);
-        Blank_Tile_Map blank_Tile_Map37 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map37,10,4);
-        Blank_Tile_Map blank_Tile_Map38 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map38,9,4);
-        Blank_Tile_Map blank_Tile_Map39 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map39,8,4);
-        Blank_Tile_Map blank_Tile_Map40 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map40,8,3);
-        Blank_Tile_Map blank_Tile_Map41 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map41,8,2);
-        Blank_Tile_Map blank_Tile_Map42 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map42,8,1);
-        Blue_Tile_Map blue_Tile_Map = new Blue_Tile_Map();
-        addObject(blue_Tile_Map,10,1);
-        Blue_Tile_Map blue_Tile_Map2 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map2,10,2);
-        Blue_Tile_Map blue_Tile_Map3 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map3,11,1);
-        Blue_Tile_Map blue_Tile_Map4 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map4,11,2);
-        Green_Tile_Map green_Tile_Map = new Green_Tile_Map();
-        addObject(green_Tile_Map,1,10);
-        Green_Tile_Map green_Tile_Map2 = new Green_Tile_Map();
-        addObject(green_Tile_Map2,1,11);
-        Green_Tile_Map green_Tile_Map3 = new Green_Tile_Map();
-        addObject(green_Tile_Map3,2,10);
-        Green_Tile_Map green_Tile_Map4 = new Green_Tile_Map();
-        addObject(green_Tile_Map4,2,11);
-        White_Tile_Map white_Tile_Map = new White_Tile_Map();
-        addObject(white_Tile_Map,10,10);
-        White_Tile_Map white_Tile_Map2 = new White_Tile_Map();
-        addObject(white_Tile_Map2,10,11);
-        White_Tile_Map white_Tile_Map3 = new White_Tile_Map();
-        addObject(white_Tile_Map3,11,10);
-        White_Tile_Map white_Tile_Map4 = new White_Tile_Map();
-        addObject(white_Tile_Map4,11,11);
-        blank_Tile_Map11.setLocation(1,4);
-        Black_Tile_Map black_Tile_Map5 = new Black_Tile_Map();
-        addObject(black_Tile_Map5,1,4);
-        blank_Tile_Map42.setLocation(8,1);
-        Blue_Tile_Map blue_Tile_Map5 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map5,8,1);
-        blank_Tile_Map32.setLocation(11,8);
-        Green_Tile_Map green_Tile_Map5 = new Green_Tile_Map();
-        addObject(green_Tile_Map5,11,8);
-        blank_Tile_Map22.setLocation(4,11);
-        Green_Tile_Map green_Tile_Map6 = new Green_Tile_Map();
-        addObject(green_Tile_Map6,4,11);
-        blank_Tile_Map32.setLocation(11,8);
-        White_Tile_Map white_Tile_Map5 = new White_Tile_Map();
-        addObject(white_Tile_Map5,11,8);
-        black_Tile_Map.setLocation(1,1);
-        Black_Player black_Player = new Black_Player();
-        addObject(black_Player,1,1);
-        black_Tile_Map4.setLocation(2,1);
-        Black_Player black_Player2 = new Black_Player();
-        addObject(black_Player2,2,1);
-        black_Tile_Map2.setLocation(1,2);
-        Black_Player black_Player3 = new Black_Player();
-        addObject(black_Player3,1,2);
-        black_Tile_Map3.setLocation(2,2);
-        Black_Player black_Player4 = new Black_Player();
-        addObject(black_Player4,2,2);
-        blue_Tile_Map.setLocation(10,1);
-        Blue_Player blue_Player = new Blue_Player();
-        addObject(blue_Player,10,1);
-        blue_Tile_Map3.setLocation(11,1);
-        Blue_Player blue_Player2 = new Blue_Player();
-        addObject(blue_Player2,11,1);
-        blue_Tile_Map4.setLocation(11,2);
-        Blue_Player blue_Player3 = new Blue_Player();
-        addObject(blue_Player3,11,2);
-        blue_Tile_Map2.setLocation(10,2);
-        Blue_Player blue_Player4 = new Blue_Player();
-        addObject(blue_Player4,10,2);
-        green_Tile_Map.setLocation(1,10);
-        Green_Player green_Player = new Green_Player();
-        addObject(green_Player,1,10);
-        green_Tile_Map3.setLocation(2,10);
-        Green_Player green_Player2 = new Green_Player();
-        addObject(green_Player2,2,10);
-        green_Tile_Map2.setLocation(1,11);
-        Green_Player green_Player3 = new Green_Player();
-        addObject(green_Player3,1,11);
-        green_Tile_Map4.setLocation(2,11);
-        Green_Player green_Player4 = new Green_Player();
-        addObject(green_Player4,2,11);
-        white_Tile_Map.setLocation(10,10);
-        White_Player white_Player = new White_Player();
-        addObject(white_Player,10,10);
-        white_Tile_Map3.setLocation(11,10);
-        White_Player white_Player2 = new White_Player();
-        addObject(white_Player2,11,10);
-        white_Tile_Map2.setLocation(10,11);
-        White_Player white_Player3 = new White_Player();
-        addObject(white_Player3,10,11);
-        white_Tile_Map4.setLocation(11,11);
-        White_Player white_Player4 = new White_Player();
-        addObject(white_Player4,11,11);
-        blank_Tile_Map42.setLocation(8,1);
-        Blank_Tile_Map blank_Tile_Map43 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map43,8,1);
-        blank_Tile_Map32.setLocation(11,8);
-        Blank_Tile_Map blank_Tile_Map44 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map44,11,8);
-        blank_Tile_Map22.setLocation(4,11);
-        Blank_Tile_Map blank_Tile_Map45 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map45,4,11);
-        blank_Tile_Map11.setLocation(1,4);
-        Blank_Tile_Map blank_Tile_Map46 = new Blank_Tile_Map();
-        addObject(blank_Tile_Map46,1,4);
-        Black_Tile_Map black_Tile_Map6 = new Black_Tile_Map();
-        addObject(black_Tile_Map6,6,2);
-        Black_Tile_Map black_Tile_Map7 = new Black_Tile_Map();
-        addObject(black_Tile_Map7,6,3);
-        Black_Tile_Map black_Tile_Map8 = new Black_Tile_Map();
-        addObject(black_Tile_Map8,6,4);
-        Black_Tile_Map black_Tile_Map9 = new Black_Tile_Map();
-        addObject(black_Tile_Map9,6,5);
-        Blue_Tile_Map blue_Tile_Map6 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map6,10,6);
-        Blue_Tile_Map blue_Tile_Map7 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map7,9,6);
-        Blue_Tile_Map blue_Tile_Map8 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map8,8,6);
-        Blue_Tile_Map blue_Tile_Map9 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map9,7,6);
-        Green_Tile_Map green_Tile_Map7 = new Green_Tile_Map();
-        addObject(green_Tile_Map7,2,6);
-        Green_Tile_Map green_Tile_Map8 = new Green_Tile_Map();
-        addObject(green_Tile_Map8,3,6);
-        Green_Tile_Map green_Tile_Map9 = new Green_Tile_Map();
-        addObject(green_Tile_Map9,4,6);
-        Green_Tile_Map green_Tile_Map10 = new Green_Tile_Map();
-        addObject(green_Tile_Map10,5,6);
-        White_Tile_Map white_Tile_Map6 = new White_Tile_Map();
-        addObject(white_Tile_Map6,6,10);
-        White_Tile_Map white_Tile_Map7 = new White_Tile_Map();
-        addObject(white_Tile_Map7,6,9);
-        White_Tile_Map white_Tile_Map8 = new White_Tile_Map();
-        addObject(white_Tile_Map8,6,8);
-        White_Tile_Map white_Tile_Map9 = new White_Tile_Map();
-        addObject(white_Tile_Map9,6,7);
-        blank_Tile_Map26.setLocation(8,11);
-        White_Tile_Map white_Tile_Map10 = new White_Tile_Map();
-        addObject(white_Tile_Map10,8,11);
-        blank_Tile_Map16.setLocation(1,8);
-        Green_Tile_Map green_Tile_Map11 = new Green_Tile_Map();
-        addObject(green_Tile_Map11,1,8);
-        blank_Tile_Map36.setLocation(11,4);
-        Blue_Tile_Map blue_Tile_Map10 = new Blue_Tile_Map();
-        addObject(blue_Tile_Map10,11,4);
-        blank_Tile_Map.setLocation(4,1);
-        Black_Tile_Map black_Tile_Map10 = new Black_Tile_Map();
-        addObject(black_Tile_Map10,4,1);
-        blank_Tile_Map16.setLocation(1,9);
-        blank_Tile_Map16.setLocation(0,8);
-        blank_Tile_Map16.setLocation(1,8);
-        removeObject(blank_Tile_Map16);
-        green_Tile_Map11.setLocation(1,8);
-        blank_Tile_Map11.setLocation(1,3);
-        blank_Tile_Map11.setLocation(0,4);
-        removeObject(blank_Tile_Map46);
-        removeObject(black_Tile_Map5);
-        blank_Tile_Map.setLocation(3,1);
-        blank_Tile_Map.setLocation(4,1);
-        removeObject(blank_Tile_Map);
-        black_Tile_Map10.setLocation(4,1);
-        blank_Tile_Map42.setLocation(8,0);
-        blank_Tile_Map42.setLocation(9,1);
-        removeObject(blue_Tile_Map5);
-        removeObject(blank_Tile_Map43);
-        blank_Tile_Map36.setLocation(11,3);
-        removeObject(blank_Tile_Map36);
-        blue_Tile_Map10.setLocation(11,4);
-        blank_Tile_Map32.setLocation(12,8);
-        blank_Tile_Map32.setLocation(11,9);
-        blank_Tile_Map32.setLocation(12,9);
-        removeObject(white_Tile_Map5);
-        removeObject(green_Tile_Map5);
-        removeObject(blank_Tile_Map44);
-        blank_Tile_Map32.setLocation(11,8);
-        blank_Tile_Map26.setLocation(8,11);
-        removeObject(blank_Tile_Map26);
-        removeObject(green_Tile_Map6);
-        removeObject(blank_Tile_Map45);
-        blank_Tile_Map11.setLocation(1,4);
-        blank_Tile_Map42.setLocation(8,1);
+        // Home
+        addTileGroup(new Black_Tile_Map(), 1, 1);// Oben links
+        addTileGroup(new Blue_Tile_Map(), 10, 1);  // Oben rechts (Beispielwert für x)
+        addTileGroup(new Green_Tile_Map(), 1, 10); // Unten links (Beispielwert für y)
+        addTileGroup(new White_Tile_Map(), 10, 10); // Unten rechts
+        
+        // Player
+        addPlayerGroup(new Black_Player(), 1, 1); // Oben links
+        addPlayerGroup(new Blue_Player(), 10, 1);  // Oben rechts (Beispielwert für x)
+        addPlayerGroup(new Green_Player(), 1, 10); // Unten links (Beispielwert für y)
+        addPlayerGroup(new White_Player(), 10, 10); // Unten rechts
+        
+        
+        int mid = 6; // Die Mitte bei 13 Feldern (0-12)
+    
+        // Die Arme des Kreuzes sind jeweils 5 Felder lang (von 1-5 und 7-11)
+        for (int i = 1; i <= 4; i++) {
+            // Oben & Unten
+            addBlankIfEmpty(mid - 2, i); // Linke Kante vertikal
+            addBlankIfEmpty(mid + 2, i); // Rechte Kante vertikal
+            addBlankIfEmpty(mid - 2, i + 7); 
+            addBlankIfEmpty(mid + 2, i + 7);
+    
+            // Links & Rechts
+            addBlankIfEmpty(i, mid - 2); // Obere Kante horizontal
+            addBlankIfEmpty(i, mid + 2); // Untere Kante horizontal
+            addBlankIfEmpty(i + 7, mid - 2);
+            addBlankIfEmpty(i + 7, mid + 2);
+        }
+        
+        // Oben
+        for (int i = 0; i < 2; i++){
+            addBlankIfEmpty(mid + 1 - i, 1);
+        }
+        // Unten
+        for (int i = 0; i < 2; i++){
+            addBlankIfEmpty(mid + 1 - i, 11);
+        }
+        // Links
+        for (int i = 0; i < 2; i++){
+            addBlankIfEmpty(1, mid + 1 - i);
+        }
+        // Rechts
+        for (int i = 0; i < 2; i++){
+            addBlankIfEmpty(11, mid + 1 - i);
+        }
+        
+        // Spawn
+        addBlackIfEmpty(mid - 1, 1);
+        addWhiteIfEmpty(mid - 1, 11);
+        addBlueIfEmpty(1, mid - 1);
+        addGreenIfEmpty(11, mid - 1);
+    }
+    
+    private void addTileGroup(Actor tile, int startX, int startY) {
+        for (int x = 0; x < 2; x++) {
+            for (int y = 0; y < 2; y++) {
+                // Wir müssen für jedes Feld ein neues Objekt erstellen
+                try {
+                    addObject(tile.getClass().getDeclaredConstructor().newInstance(), startX + x, startY + y);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    
+    }
+    
+    private void addPlayerGroup(Actor tile, int startX, int startY) {
+        for (int x = 0; x < 2; x++) {
+            for (int y = 0; y < 2; y++) {
+                // Wir müssen für jedes Feld ein neues Objekt erstellen
+                try {
+                    addObject(tile.getClass().getDeclaredConstructor().newInstance(), startX + x, startY + y);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    
+    }
+    
+    private void addBlankIfEmpty(int x, int y) {
+        if (getObjectsAt(x, y, null).isEmpty()) {
+            addObject(new Blank_Tile_Map(), x, y);
+        }
+    }
+    
+    private void addBlackIfEmpty(int x, int y) {
+        if (getObjectsAt(x, y, null).isEmpty()) {
+            addObject(new Black_Tile_Map(), x, y);
+        }
+    }
+    
+    private void addWhiteIfEmpty(int x, int y) {
+        if (getObjectsAt(x, y, null).isEmpty()) {
+            addObject(new White_Tile_Map(), x, y);
+        }
+    }
+    
+    private void addBlueIfEmpty(int x, int y) {
+        if (getObjectsAt(x, y, null).isEmpty()) {
+            addObject(new Blue_Tile_Map(), x, y);
+        }
+    }
+    
+    private void addGreenIfEmpty(int x, int y) {
+        if (getObjectsAt(x, y, null).isEmpty()) {
+            addObject(new Green_Tile_Map(), x, y);
+        }
     }
 }
