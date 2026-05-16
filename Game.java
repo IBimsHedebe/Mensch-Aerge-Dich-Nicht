@@ -22,34 +22,72 @@ public class Game extends World
     private void prepare()
     {
         // Home
-        addTileGroup(new Black_Tile_Map(), 1, 1);// Oben links
-        addTileGroup(new Blue_Tile_Map(), 10, 1);  // Oben rechts (Beispielwert für x)
-        addTileGroup(new Green_Tile_Map(), 1, 10); // Unten links (Beispielwert für y)
-        addTileGroup(new White_Tile_Map(), 10, 10); // Unten rechts
-        
+        // Black
+        addBlackIfEmpty(1,1);
+        addBlackIfEmpty(1,2);
+        addBlackIfEmpty(2,1);
+        addBlackIfEmpty(2,2);
+
+        // White
+        addWhiteIfEmpty(10,10);
+        addWhiteIfEmpty(10,11);
+        addWhiteIfEmpty(11,10);
+        addWhiteIfEmpty(11,11);
+
+        // Blue
+        addBlueIfEmpty(10,1);
+        addBlueIfEmpty(10,2);
+        addBlueIfEmpty(11,1);
+        addBlueIfEmpty(11,2);
+
+        // Green
+        addGreenIfEmpty(1,10);
+        addGreenIfEmpty(2,10);
+        addGreenIfEmpty(1,11);
+        addGreenIfEmpty(2,11);
+
         // Player
-        addPlayerGroup(new Black_Player(), 1, 1); // Oben links
-        addPlayerGroup(new Blue_Player(), 10, 1);  // Oben rechts (Beispielwert für x)
-        addPlayerGroup(new Green_Player(), 1, 10); // Unten links (Beispielwert für y)
-        addPlayerGroup(new White_Player(), 10, 10); // Unten rechts
-        
+        // Black
+        addBlackPlayer(1,1);
+        addBlackPlayer(1,2);
+        addBlackPlayer(2,1);
+        addBlackPlayer(2,2);
+
+        // White
+        addWhitePlayer(10,10);
+        addWhitePlayer(10,11);
+        addWhitePlayer(11,10);
+        addWhitePlayer(11,11);
+
+        // Blue
+        addBluePlayer(10,1);
+        addBluePlayer(10,2);
+        addBluePlayer(11,1);
+        addBluePlayer(11,2);
+
+        // Green
+        addGreenPlayer(1,10);
+        addGreenPlayer(2,10);
+        addGreenPlayer(1,11);
+        addGreenPlayer(2,11);
+
         // Blank Fields
         int mid = 6; // Die Mitte bei 13 Feldern (0-12)
-    
+
         for (int i = 1; i <= 4; i++) {
             // Oben & Unten
             addBlankIfEmpty(mid - 2, i); // Linke Kante vertikal
             addBlankIfEmpty(mid + 2, i); // Rechte Kante vertikal
             addBlankIfEmpty(mid - 2, i + 7); 
             addBlankIfEmpty(mid + 2, i + 7);
-    
+
             // Links & Rechts
             addBlankIfEmpty(i, mid - 2); // Obere Kante horizontal
             addBlankIfEmpty(i, mid + 2); // Untere Kante horizontal
             addBlankIfEmpty(i + 7, mid - 2);
             addBlankIfEmpty(i + 7, mid + 2);
         }
-        
+
         // Oben
         for (int i = 0; i < 2; i++){
             addBlankIfEmpty(mid + 1 - i, 1);
@@ -66,13 +104,13 @@ public class Game extends World
         for (int i = 0; i < 2; i++){
             addBlankIfEmpty(11, mid + 1 - i);
         }
-        
+
         // Spawn
         addBlackIfEmpty(mid - 1, 1);
         addWhiteIfEmpty(mid - 1, 11);
         addBlueIfEmpty(11, mid - 1);
         addGreenIfEmpty(1, mid - 1);
-        
+
         // Ziel
         // Black
         for (int i = 0; i < 4; i++){
@@ -90,34 +128,24 @@ public class Game extends World
         for (int i = 0; i < 4; i++){
             addGreenIfEmpty(2 + i, mid);
         }
+        Black_Player black_Player5 = new Black_Player();
+        addObject(black_Player5,1,3);
     }
     
-    private void addTileGroup(Actor tile, int startX, int startY) {
-        for (int x = 0; x < 2; x++) {
-            for (int y = 0; y < 2; y++) {
-                // Wir müssen für jedes Feld ein neues Objekt erstellen
-                try {
-                    addObject(tile.getClass().getDeclaredConstructor().newInstance(), startX + x, startY + y);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    
+    private void addBlackPlayer(int x, int y){
+        addObject(new Black_Player(), x, y);
     }
     
-    private void addPlayerGroup(Actor tile, int startX, int startY) {
-        for (int x = 0; x < 2; x++) {
-            for (int y = 0; y < 2; y++) {
-                // Wir müssen für jedes Feld ein neues Objekt erstellen
-                try {
-                    addObject(tile.getClass().getDeclaredConstructor().newInstance(), startX + x, startY + y);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+    private void addBluePlayer(int x, int y){
+        addObject(new Blue_Player(), x, y);
+    }
     
+    private void addWhitePlayer(int x, int y){
+        addObject(new White_Player(), x, y);
+    }
+    
+    private void addGreenPlayer(int x, int y){
+        addObject(new Green_Player(), x, y);
     }
     
     private void addBlankIfEmpty(int x, int y) {
