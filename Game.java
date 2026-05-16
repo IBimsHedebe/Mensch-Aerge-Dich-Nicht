@@ -33,10 +33,9 @@ public class Game extends World
         addPlayerGroup(new Green_Player(), 1, 10); // Unten links (Beispielwert für y)
         addPlayerGroup(new White_Player(), 10, 10); // Unten rechts
         
-        
+        // Blank Fields
         int mid = 6; // Die Mitte bei 13 Feldern (0-12)
     
-        // Die Arme des Kreuzes sind jeweils 5 Felder lang (von 1-5 und 7-11)
         for (int i = 1; i <= 4; i++) {
             // Oben & Unten
             addBlankIfEmpty(mid - 2, i); // Linke Kante vertikal
@@ -71,8 +70,26 @@ public class Game extends World
         // Spawn
         addBlackIfEmpty(mid - 1, 1);
         addWhiteIfEmpty(mid - 1, 11);
-        addBlueIfEmpty(1, mid - 1);
-        addGreenIfEmpty(11, mid - 1);
+        addBlueIfEmpty(11, mid - 1);
+        addGreenIfEmpty(1, mid - 1);
+        
+        // Ziel
+        // Black
+        for (int i = 0; i < 4; i++){
+            addBlackIfEmpty(mid, 2 + i);
+        }
+        // White
+        for (int i = 0; i < 4; i++){
+            addWhiteIfEmpty(mid, 10 - i);
+        }
+        // Blue
+        for (int i = 0; i < 4; i++){
+            addBlueIfEmpty(10 - i, mid);
+        }
+        //Green
+        for (int i = 0; i < 4; i++){
+            addGreenIfEmpty(2 + i, mid);
+        }
     }
     
     private void addTileGroup(Actor tile, int startX, int startY) {
