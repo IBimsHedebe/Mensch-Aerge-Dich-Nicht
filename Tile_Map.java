@@ -8,15 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Tile_Map extends Actor
 {
     private GreenfootImage tileColor;
+    private int tileNumber;
+    private String color;
     
-    public Tile_Map(String color){
+    public Tile_Map(int number, String color){
+        this.tileNumber = number;
+        
         tileColor = new GreenfootImage("Map/" + color + ".png");
         tileColor.scale(48,48);
         setImage(tileColor);
     }
     
-    public void act()
-    {
-        // Add your action code here.
+    public int getFeldNumber(){
+        return this.tileNumber;
     }
 }

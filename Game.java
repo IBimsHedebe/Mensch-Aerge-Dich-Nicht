@@ -23,177 +23,104 @@ public class Game extends World
     {
         // Spawn
         // Black
-        Black_Tile_Map BlackSpawn1 = new Black_Tile_Map();
-        addObject(BlackSpawn1,1,1);
-        Black_Tile_Map BlackSpawn2 = new Black_Tile_Map();
-        addObject(BlackSpawn2,2,1);
-        Black_Tile_Map BlackSpawn3 = new Black_Tile_Map();
-        addObject(BlackSpawn3,1,2);
-        Black_Tile_Map BlackSpawn4 = new Black_Tile_Map();
-        addObject(BlackSpawn4,2,2);
+        addObject(new Tile_Map(41, "black"), 1, 1);
+        addObject(new Tile_Map(42, "black"), 1, 2);
+        addObject(new Tile_Map(43, "black"), 2, 1);
+        addObject(new Tile_Map(44, "black"), 2, 2);
 
         // Blue
-        Blue_Tile_Map BlueSpawn1 = new Blue_Tile_Map();
-        addObject(BlueSpawn1,11,1);
-        Blue_Tile_Map BlueSpawn2 = new Blue_Tile_Map();
-        addObject(BlueSpawn2,10,1);
-        Blue_Tile_Map BlueSpawn3 = new Blue_Tile_Map();
-        addObject(BlueSpawn3,10,2);
-        Blue_Tile_Map BlueSpawn4 = new Blue_Tile_Map();
-        addObject(BlueSpawn4,11,2);
+        addObject(new Tile_Map(45, "blue"), 11, 1);
+        addObject(new Tile_Map(46, "blue"), 10, 1);
+        addObject(new Tile_Map(47, "blue"), 10, 2);
+        addObject(new Tile_Map(48, "blue"), 11, 2);
 
         // White
-        White_Tile_Map WhiteSpawn1 = new White_Tile_Map();
-        addObject(WhiteSpawn1,10,10);
-        White_Tile_Map WhiteSpawn2 = new White_Tile_Map();
-        addObject(WhiteSpawn2,11,10);
-        White_Tile_Map WhiteSpawn3 = new White_Tile_Map();
-        addObject(WhiteSpawn3,11,11);
-        White_Tile_Map WhiteSpawn4 = new White_Tile_Map();
-        addObject(WhiteSpawn4,10,11);
+        addObject(new Tile_Map(49, "white"), 10, 10);
+        addObject(new Tile_Map(50, "white"), 11, 10);
+        addObject(new Tile_Map(51, "white"), 11, 11);
+        addObject(new Tile_Map(52, "white"), 10, 11);
 
         // Green
-        Green_Tile_Map GreenSpawn1 = new Green_Tile_Map();
-        addObject(GreenSpawn1,1,11);
-        Green_Tile_Map GreenSpawn2 = new Green_Tile_Map();
-        addObject(GreenSpawn2,1,10);
-        Green_Tile_Map GreenSpawn3 = new Green_Tile_Map();
-        addObject(GreenSpawn3,2,10);
-        Green_Tile_Map GreenSpawn4 = new Green_Tile_Map();
-        addObject(GreenSpawn4,2,11);
+        addObject(new Tile_Map(53, "green"), 1, 11);
+        addObject(new Tile_Map(54, "green"), 1, 10);
+        addObject(new Tile_Map(55, "green"), 2, 10);
+        addObject(new Tile_Map(56, "green"), 2, 11);
         
 
         // STARTFELDER
-        Black_Tile_Map Feld1 = new Black_Tile_Map();
-        addObject(Feld1,4,1);
+        addObject(new Tile_Map(1, "black"), 4, 1);
+        
+        addObject(new Tile_Map(11, "blue"), 11, 4);
 
-        Blue_Tile_Map Feld11 = new Blue_Tile_Map();
-        addObject(Feld11,11,4);
+        addObject(new Tile_Map(21, "white"), 8, 11);
 
-        White_Tile_Map Feld21 = new White_Tile_Map();
-        addObject(Feld21,8,11);
-
-        Green_Tile_Map Feld31 = new Green_Tile_Map();
-        addObject(Feld31,1,8);
+        addObject(new Tile_Map(31, "green"), 1, 8);
 
         // NORMALE LAUFFELDER
-        Blank_Tile_Map Feld2 = new Blank_Tile_Map();
-        addObject(Feld2,5,1);
-        Blank_Tile_Map Feld3 = new Blank_Tile_Map();
-        addObject(Feld3,6,1);
-        Blank_Tile_Map Feld4 = new Blank_Tile_Map();
-        addObject(Feld4,7,1);
-        Blank_Tile_Map Feld5 = new Blank_Tile_Map();
-        addObject(Feld5,8,1);
-        Blank_Tile_Map Feld6 = new Blank_Tile_Map();
-        addObject(Feld6,8,2);
-        Blank_Tile_Map Feld7 = new Blank_Tile_Map();
-        addObject(Feld7,8,3);
-        Blank_Tile_Map Feld8 = new Blank_Tile_Map();
-        addObject(Feld8,8,4);
-        Blank_Tile_Map Feld9 = new Blank_Tile_Map();
-        addObject(Feld9,9,4);
-        Blank_Tile_Map Feld10 = new Blank_Tile_Map();
-        addObject(Feld10,10,4);
+        addObject(new Tile_Map(2, "blank"), 5, 1);
+        addObject(new Tile_Map(3, "blank"), 6, 1);
+        addObject(new Tile_Map(4, "blank"), 7, 1);
+        addObject(new Tile_Map(5, "blank"), 8, 1);
+        addObject(new Tile_Map(6, "blank"), 8, 2);
+        addObject(new Tile_Map(7, "blank"), 8, 3);
+        addObject(new Tile_Map(8, "blank"), 8, 4);
+        addObject(new Tile_Map(9, "blank"), 9, 4);
+        addObject(new Tile_Map(10, "blank"), 10, 4);
 
-        Blank_Tile_Map Feld12 = new Blank_Tile_Map();
-        addObject(Feld12,11,5);
-        Blank_Tile_Map Feld13 = new Blank_Tile_Map();
-        addObject(Feld13,11,6);
-        Blank_Tile_Map Feld14 = new Blank_Tile_Map();
-        addObject(Feld14,11,7);
-        Blank_Tile_Map Feld15 = new Blank_Tile_Map();
-        addObject(Feld15,11,8);
-        Blank_Tile_Map Feld16 = new Blank_Tile_Map();
-        addObject(Feld16,10,8);
-        Blank_Tile_Map Feld17 = new Blank_Tile_Map();
-        addObject(Feld17,9,8);
-        Blank_Tile_Map Feld18 = new Blank_Tile_Map();
-        addObject(Feld18,8,8);
-        Blank_Tile_Map Feld19 = new Blank_Tile_Map();
-        addObject(Feld19,8,9);
-        Blank_Tile_Map Feld20 = new Blank_Tile_Map();
-        addObject(Feld20,8,10);
+        addObject(new Tile_Map(12, "blank"), 11, 5);
+        addObject(new Tile_Map(13, "blank"), 11, 6);
+        addObject(new Tile_Map(14, "blank"), 11, 7);
+        addObject(new Tile_Map(15, "blank"), 11, 8);
+        addObject(new Tile_Map(16, "blank"), 10, 8);
+        addObject(new Tile_Map(17, "blank"), 9, 8);
+        addObject(new Tile_Map(18, "blank"), 8, 8);
+        addObject(new Tile_Map(19, "blank"), 8, 9);
+        addObject(new Tile_Map(20, "blank"), 8, 10);
 
-        Blank_Tile_Map Feld22 = new Blank_Tile_Map();
-        addObject(Feld22,7,11);
-        Blank_Tile_Map Feld23 = new Blank_Tile_Map();
-        addObject(Feld23,6,11);
-        Blank_Tile_Map Feld24 = new Blank_Tile_Map();
-        addObject(Feld24,5,11);
-        Blank_Tile_Map Feld25 = new Blank_Tile_Map();
-        addObject(Feld25,4,11);
-        Blank_Tile_Map Feld26 = new Blank_Tile_Map();
-        addObject(Feld26,4,10);
-        Blank_Tile_Map Feld27 = new Blank_Tile_Map();
-        addObject(Feld27,4,9);
-        Blank_Tile_Map Feld28 = new Blank_Tile_Map();
-        addObject(Feld28,4,8);
-        Blank_Tile_Map Feld29 = new Blank_Tile_Map();
-        addObject(Feld29,3,8);
-        Blank_Tile_Map Feld30 = new Blank_Tile_Map();
-        addObject(Feld30,2,8);
-
-        Blank_Tile_Map Feld32 = new Blank_Tile_Map();
-        addObject(Feld32,1,7);
-        Blank_Tile_Map Feld33 = new Blank_Tile_Map();
-        addObject(Feld33,1,6);
-        Blank_Tile_Map Feld34 = new Blank_Tile_Map();
-        addObject(Feld34,1,5);
-        Blank_Tile_Map Feld35 = new Blank_Tile_Map();
-        addObject(Feld35,1,4);
-        Blank_Tile_Map Feld36 = new Blank_Tile_Map();
-        addObject(Feld36,2,4);
-        Blank_Tile_Map Feld37 = new Blank_Tile_Map();
-        addObject(Feld37,3,4);
-        Blank_Tile_Map Feld38 = new Blank_Tile_Map();
-        addObject(Feld38,4,4);
-        Blank_Tile_Map Feld39 = new Blank_Tile_Map();
-        addObject(Feld39,4,3);
-        Blank_Tile_Map Feld40 = new Blank_Tile_Map();
-        addObject(Feld40,4,2);
-
+        addObject(new Tile_Map(22, "blank"), 7, 11);
+        addObject(new Tile_Map(23, "blank"), 6, 11);
+        addObject(new Tile_Map(24, "blank"), 5, 11);
+        addObject(new Tile_Map(25, "blank"), 4, 11);
+        addObject(new Tile_Map(26, "blank"), 4, 10);
+        addObject(new Tile_Map(27, "blank"), 4, 9);
+        addObject(new Tile_Map(28, "blank"), 4, 8);
+        addObject(new Tile_Map(29, "blank"), 3, 8);
+        addObject(new Tile_Map(30, "blank"), 2, 8);
+        
+        addObject(new Tile_Map(32, "blank"), 1, 7);
+        addObject(new Tile_Map(33, "blank"), 1, 6);
+        addObject(new Tile_Map(34, "blank"), 1, 5);
+        addObject(new Tile_Map(35, "blank"), 1, 4);
+        addObject(new Tile_Map(36, "blank"), 2, 4);
+        addObject(new Tile_Map(37, "blank"), 3, 4);
+        addObject(new Tile_Map(38, "blank"), 4, 4);
+        addObject(new Tile_Map(39, "blank"), 4, 3);
+        addObject(new Tile_Map(40, "blank"), 4, 2);
         
         // ZIELFELDER
         // BLACK
-        Black_Tile_Map BlackZiel1 = new Black_Tile_Map();
-        addObject(BlackZiel1,6,2);
-        Black_Tile_Map BlackZiel2 = new Black_Tile_Map();
-        addObject(BlackZiel2,6,3);
-        Black_Tile_Map BlackZiel3 = new Black_Tile_Map();
-        addObject(BlackZiel3,6,4);
-        Black_Tile_Map BlackZiel4 = new Black_Tile_Map();
-        addObject(BlackZiel4,6,5);
+        addObject(new Tile_Map(57, "black"), 6, 2);
+        addObject(new Tile_Map(58, "black"), 6, 3);
+        addObject(new Tile_Map(59, "black"), 6, 4);
+        addObject(new Tile_Map(60, "black"), 6, 5);
 
         // BLUE
-        Blue_Tile_Map BlueZiel1 = new Blue_Tile_Map();
-        addObject(BlueZiel1,10,6);
-        Blue_Tile_Map BlueZiel2 = new Blue_Tile_Map();
-        addObject(BlueZiel2,9,6);
-        Blue_Tile_Map BlueZiel3 = new Blue_Tile_Map();
-        addObject(BlueZiel3,8,6);
-        Blue_Tile_Map BlueZiel4 = new Blue_Tile_Map();
-        addObject(BlueZiel4,7,6);
+        addObject(new Tile_Map(61, "blue"), 10, 6);
+        addObject(new Tile_Map(62, "blue"), 9, 6);
+        addObject(new Tile_Map(63, "blue"), 8, 6);
+        addObject(new Tile_Map(64, "blue"), 7, 6);
 
         // WHITE
-        White_Tile_Map WhiteZiel1 = new White_Tile_Map();
-        addObject(WhiteZiel1,6,10);
-        White_Tile_Map WhiteZiel2 = new White_Tile_Map();
-        addObject(WhiteZiel2,6,9);
-        White_Tile_Map WhiteZiel3 = new White_Tile_Map();
-        addObject(WhiteZiel3,6,8);
-        White_Tile_Map WhiteZiel4 = new White_Tile_Map();
-        addObject(WhiteZiel4,6,7);
+        addObject(new Tile_Map(65, "white"), 6, 10);
+        addObject(new Tile_Map(66, "white"), 6, 9);
+        addObject(new Tile_Map(67, "white"), 6, 8);
+        addObject(new Tile_Map(68, "white"), 6, 7);
         
         //GREEN
-        Green_Tile_Map GreenZiel1 = new Green_Tile_Map();
-        addObject(GreenZiel1,2,6);
-        Green_Tile_Map GreenZiel2 = new Green_Tile_Map();
-        addObject(GreenZiel2,3,6);
-        Green_Tile_Map GreenZiel3 = new Green_Tile_Map();
-        addObject(GreenZiel3,4,6);
-        Green_Tile_Map GreenZiel4 = new Green_Tile_Map();
-        addObject(GreenZiel4,5,6);
+        addObject(new Tile_Map(69, "green"), 2, 6);
+        addObject(new Tile_Map(70, "green"), 3, 6);
+        addObject(new Tile_Map(71, "green"), 4, 6);
+        addObject(new Tile_Map(72, "green"), 5, 6);
         
         
         //Player
