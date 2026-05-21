@@ -14,6 +14,23 @@ public class Player extends Actor{
     private int frame = 0; // Aktueller Frame
     private int animationTimer = 0; // Bremst die Geschwindigkeit
     
+    public void act(){
+        animate();
+        
+        List<Dice> dices = getWorld().getObjects(Dice.class);
+        if (!dices.isEmpty()){
+            Dice dice = dices.get(0);
+            int rolledNumber = dice.getRandomNumber();
+            boolean clicked = dice.getIsClicked();
+            
+            if (clicked){
+                move(rolledNumber);
+                dice.setIsClicked(false);
+            }
+            }
+        
+        }
+    
     public Player(String spriteColour){
         // Anzahl der Bilder in der Animation
         idleImages = new GreenfootImage[3];
@@ -39,7 +56,7 @@ public class Player extends Actor{
             Tile_Map aktuellesFeld = tiles.get(0);
             int aktuelleNummer = aktuellesFeld.getFeldNumber();
             
-            int ziel = aktuelleNummer + schritte;
+            int ziel = aktuelleNummer + schritte + 1;
             
             if (ziel > 40){
                 ziel = ziel - 40;
@@ -60,12 +77,7 @@ public class Player extends Actor{
             }
         }
     }
-    
-    public void act(){
-        animate();
-        move(1);
-        }
-    
+
     private void animate(){
         animationTimer ++;
         
