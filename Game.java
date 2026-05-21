@@ -15,10 +15,6 @@ public class Game extends World
         prepare();
     }
     
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
     private void prepare()
     {
         // Spawn
@@ -45,11 +41,10 @@ public class Game extends World
         addObject(new Tile_Map(54, "green"), 1, 10);
         addObject(new Tile_Map(55, "green"), 2, 10);
         addObject(new Tile_Map(56, "green"), 2, 11);
-        
 
         // STARTFELDER
         addObject(new Tile_Map(1, "black"), 4, 1);
-        
+
         addObject(new Tile_Map(11, "blue"), 11, 4);
 
         addObject(new Tile_Map(21, "white"), 8, 11);
@@ -86,7 +81,7 @@ public class Game extends World
         addObject(new Tile_Map(28, "blank"), 4, 8);
         addObject(new Tile_Map(29, "blank"), 3, 8);
         addObject(new Tile_Map(30, "blank"), 2, 8);
-        
+
         addObject(new Tile_Map(32, "blank"), 1, 7);
         addObject(new Tile_Map(33, "blank"), 1, 6);
         addObject(new Tile_Map(34, "blank"), 1, 5);
@@ -96,7 +91,7 @@ public class Game extends World
         addObject(new Tile_Map(38, "blank"), 4, 4);
         addObject(new Tile_Map(39, "blank"), 4, 3);
         addObject(new Tile_Map(40, "blank"), 4, 2);
-        
+
         // ZIELFELDER
         // BLACK
         addObject(new Tile_Map(57, "black"), 6, 2);
@@ -115,54 +110,74 @@ public class Game extends World
         addObject(new Tile_Map(66, "white"), 6, 9);
         addObject(new Tile_Map(67, "white"), 6, 8);
         addObject(new Tile_Map(68, "white"), 6, 7);
-        
+
         //GREEN
         addObject(new Tile_Map(69, "green"), 2, 6);
         addObject(new Tile_Map(70, "green"), 3, 6);
         addObject(new Tile_Map(71, "green"), 4, 6);
         addObject(new Tile_Map(72, "green"), 5, 6);
-        
-        
+
         //Player
         //Black
         Black_Player BlackPlayer1 = new Black_Player();
         addObject(BlackPlayer1,1,1);
-        Black_Player BlackPlayer2 = new Black_Player();
-        addObject(BlackPlayer2,2,1);
-        Black_Player BlackPlayer3 = new Black_Player();
-        addObject(BlackPlayer3,1,2);
-        Black_Player BlackPlayer4 = new Black_Player();
-        addObject(BlackPlayer4,2,2);
+        
+        
+        // Dice
+        Dice dice = new Dice();
+        addObject(dice,6,13);
+    }
+    
+    public void pruefeGewinner()
+    {
+    if(blackHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Grau"));
+        return;
+    }
 
-        //Blue
-        Blue_Player BluePlayer1 = new Blue_Player();
-        addObject(BluePlayer1,10,1);
-        Blue_Player BluePlayer2 = new Blue_Player();
-        addObject(BluePlayer2,11,1);
-        Blue_Player BluePlayer3 = new Blue_Player();
-        addObject(BluePlayer3,10,2);
-        Blue_Player BluePlayer4 = new Blue_Player();
-        addObject(BluePlayer4,11,2);
+    if(blueHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Blau"));
+        return;
+    }
 
-        // White
-        White_Player WhitePlayer1 = new White_Player();
-        addObject(WhitePlayer1,10,10);
-        White_Player WhitePlayer2 = new White_Player();
-        addObject(WhitePlayer2,11,10);
-        White_Player WhitePlayer3 = new White_Player();
-        addObject(WhitePlayer3,10,11);
-        White_Player WhitePlayer4 = new White_Player();
-        addObject(WhitePlayer4,11,11);
+    if(greenHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Gruen"));
+        return;
+    }
 
-        // Green
-        Green_Player GreenPlayer1 = new Green_Player();
-        addObject(GreenPlayer1,1,10);
-        Green_Player GreenPlayer2 = new Green_Player();
-        addObject(GreenPlayer2,2,10);
-        Green_Player GreenPlayer3 = new Green_Player();
-        addObject(GreenPlayer3,1,11);
-        Green_Player GreenPlayer4 = new Green_Player();
-        addObject(GreenPlayer4,2,11);
+    if(whiteHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Weiss"));
+        return;
+    }
+    }
+    
+    public boolean blackHatGewonnen()
+    {
+    return false;
+    }
+
+    public boolean blueHatGewonnen()
+    {
+    return false;
+    }
+
+    public boolean greenHatGewonnen()
+    {
+    return false;
+    }
+
+    public boolean whiteHatGewonnen()
+    {
+    return false;
+    }
+    
+    public void act()
+    {
+    pruefeGewinner();
     }
     
     public void pruefeGewinner()

@@ -14,6 +14,49 @@ public class Player extends Actor{
     private int frame = 0; // Aktueller Frame
     private int animationTimer = 0; // Bremst die Geschwindigkeit
     
+    boolean istZuhause = true;
+    boolean istUnterwegs = false;
+    boolean istImZiel = false;
+
+    public void act(){
+        animate();
+        System.out.println("Zustand: " + (istZuhause ? "ZUHAUSE" : istUnterwegs ? "UNTERWEGS" : "IM ZIEL"));
+        Greenfoot.delay(30);
+        
+        List<Tile_Map> currentTiles = getIntersectingObjects(Tile_Map.class);
+        if (!currentTiles.isEmpty()){
+            int feldNr = currentTiles.get(0).getFeldNumber();
+            
+            if (feldNr >= 41 && feldNr <= 56){
+                istZuhause = true;
+                istUnterwegs = false;
+                istImZiel = false;
+            } else if (feldNr >= 57 && feldNr <= 72){
+                istZuhause = false;
+                istUnterwegs = false;
+                istImZiel = true;
+            } else {
+                istZuhause = false;
+                istUnterwegs = true;
+                istImZiel = false;
+            }
+        }
+
+        List<Dice> dices = getWorld().getObjects(Dice.class);
+        if (!dices.isEmpty()){
+            Dice dice = dices.get(0);
+            int rolledNumber = dice.getRandomNumber();
+            boolean clicked = dice.getIsClicked();
+            
+            if (clicked){
+                move(rolledNumber);
+                dice.setIsClicked(false);
+                
+            }
+        }
+    }
+
+
     public Player(String spriteColour){
         // Anzahl der Bilder in der Animation
         idleImages = new GreenfootImage[3];
@@ -39,14 +82,13 @@ public class Player extends Actor{
             Tile_Map aktuellesFeld = tiles.get(0);
             int aktuelleNummer = aktuellesFeld.getFeldNumber();
             
-            int ziel = aktuelleNummer + schritte;
+            int ziel = aktuelleNummer + schritte + 1;
             
             if (ziel > 40){
                 ziel = ziel - 40;
             }
             
             moveToTile(ziel);
-            System.out.println(ziel);
         }
     }
     
@@ -60,12 +102,7 @@ public class Player extends Actor{
             }
         }
     }
-    
-    public void act(){
-        animate();
-        move(1);
-        }
-    
+
     private void animate(){
         animationTimer ++;
         
@@ -77,4 +114,16 @@ public class Player extends Actor{
         }
     }
     
+    
+    private int position = 0; // Die Variable für das Feld, auf dem der Spieler steht
+    
+    public int getPosition() {
+        return position;
+    }
+    
+    public void setPosition(int neuePosition) {
+        this.position = neuePosition;
+        // Hier könntest du auch direkt den Actor auf dem Bildschirm bewegen:
+        // setLocation(x, y); 
+    }
 }
