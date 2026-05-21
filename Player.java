@@ -16,8 +16,8 @@ public class Player extends Actor{
     
     public void act(){
         animate();
-        
         List<Dice> dices = getWorld().getObjects(Dice.class);
+        
         if (!dices.isEmpty()){
             Dice dice = dices.get(0);
             int rolledNumber = dice.getRandomNumber();
@@ -32,7 +32,6 @@ public class Player extends Actor{
         }
     
     public Player(String spriteColour){
-        // Anzahl der Bilder in der Animation
         idleImages = new GreenfootImage[3];
         moveImages = new GreenfootImage[6];
         
@@ -63,7 +62,6 @@ public class Player extends Actor{
             }
             
             moveToTile(ziel);
-            System.out.println(ziel);
         }
     }
     
@@ -81,7 +79,6 @@ public class Player extends Actor{
     private void animate(){
         animationTimer ++;
         
-        // Wechselt jede Sekunde durch 10 Bilder
         if (animationTimer >= 10) {
             frame = (frame + 1) % idleImages.length; // Erhöt frame um 1. Wenn Wenn das Ende fom Array erreicht ist frame = 0
             setImage(idleImages[frame]); // ändert das Bild
@@ -90,15 +87,13 @@ public class Player extends Actor{
     }
     
     
-    private int position = 0; // Die Variable für das Feld, auf dem der Spieler steht
+    private int position = 0;
     
     public int getPosition() {
         return position;
     }
     
     public void setPosition(int neuePosition) {
-        this.position = neuePosition;
-        // Hier könntest du auch direkt den Actor auf dem Bildschirm bewegen:
-        // setLocation(x, y); 
+        this.position = neuePosition; 
     }
 }
