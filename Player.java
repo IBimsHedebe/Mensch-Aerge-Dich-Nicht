@@ -14,11 +14,9 @@ public class Player extends Actor{
     private int frame = 0; // Aktueller Frame
     private int animationTimer = 0; // Bremst die Geschwindigkeit
     
-<<<<<<< HEAD
     boolean istZuhause = true;
     boolean istUnterwegs = false;
     boolean istImZiel = false;
-=======
 
     public void act(){
         animate();
@@ -39,10 +37,7 @@ public class Player extends Actor{
 
     boolean istZuhause = true;
     boolean istUnterwegs = false;
-
     boolean istImZiel = false;
-
->>>>>>> 3e8b3efacbef44072a0a61a4ca53f485c0c56bd8
     
     public Player(String spriteColour){
         // Anzahl der Bilder in der Animation
