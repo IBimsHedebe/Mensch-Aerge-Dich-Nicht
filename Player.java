@@ -20,7 +20,28 @@ public class Player extends Actor{
 
     public void act(){
         animate();
+        System.out.println("Zustand: " + (istZuhause ? "ZUHAUSE" : istUnterwegs ? "UNTERWEGS" : "IM ZIEL"));
+        Greenfoot.delay(30);
         
+        List<Tile_Map> currentTiles = getIntersectingObjects(Tile_Map.class);
+        if (!currentTiles.isEmpty()){
+                    int feldNr = currentTiles.get(0).getFeldNumber();
+                    
+                    if (feldNr >= 41 && feldNr <= 56){
+                        istZuhause = true;
+                        istUnterwegs = false;
+                        istImZiel = false;
+                    } else if (feldNr >= 57 && feldNr <= 72){
+                        istZuhause = false;
+                        istUnterwegs = false;
+                        istImZiel = true;
+                    } else {
+                        istZuhause = false;
+                        istUnterwegs = true;
+                        istImZiel = false;
+                    }
+                }
+
         List<Dice> dices = getWorld().getObjects(Dice.class);
         if (!dices.isEmpty()){
             Dice dice = dices.get(0);
@@ -30,15 +51,12 @@ public class Player extends Actor{
             if (clicked){
                 move(rolledNumber);
                 dice.setIsClicked(false);
+                
             }
-            }
-        
         }
+    }
 
-    boolean istZuhause = true;
-    boolean istUnterwegs = false;
-    boolean istImZiel = false;
-    
+
     public Player(String spriteColour){
         // Anzahl der Bilder in der Animation
         idleImages = new GreenfootImage[3];
@@ -71,7 +89,6 @@ public class Player extends Actor{
             }
             
             moveToTile(ziel);
-            System.out.println(ziel);
         }
     }
     

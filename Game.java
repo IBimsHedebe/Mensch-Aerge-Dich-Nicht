@@ -121,42 +121,7 @@ public class Game extends World
         //Black
         Black_Player BlackPlayer1 = new Black_Player();
         addObject(BlackPlayer1,1,1);
-        Black_Player BlackPlayer2 = new Black_Player();
-        addObject(BlackPlayer2,2,1);
-        Black_Player BlackPlayer3 = new Black_Player();
-        addObject(BlackPlayer3,1,2);
-        Black_Player BlackPlayer4 = new Black_Player();
-        addObject(BlackPlayer4,2,2);
-
-        //Blue
-        Blue_Player BluePlayer1 = new Blue_Player();
-        addObject(BluePlayer1,10,1);
-        Blue_Player BluePlayer2 = new Blue_Player();
-        addObject(BluePlayer2,11,1);
-        Blue_Player BluePlayer3 = new Blue_Player();
-        addObject(BluePlayer3,10,2);
-        Blue_Player BluePlayer4 = new Blue_Player();
-        addObject(BluePlayer4,11,2);
-
-        // White
-        White_Player WhitePlayer1 = new White_Player();
-        addObject(WhitePlayer1,10,10);
-        White_Player WhitePlayer2 = new White_Player();
-        addObject(WhitePlayer2,11,10);
-        White_Player WhitePlayer3 = new White_Player();
-        addObject(WhitePlayer3,10,11);
-        White_Player WhitePlayer4 = new White_Player();
-        addObject(WhitePlayer4,11,11);
-
-        // Green
-        Green_Player GreenPlayer1 = new Green_Player();
-        addObject(GreenPlayer1,1,10);
-        Green_Player GreenPlayer2 = new Green_Player();
-        addObject(GreenPlayer2,2,10);
-        Green_Player GreenPlayer3 = new Green_Player();
-        addObject(GreenPlayer3,1,11);
-        Green_Player GreenPlayer4 = new Green_Player();
-        addObject(GreenPlayer4,2,11);
+        
         
         // Dice
         Dice dice = new Dice();
