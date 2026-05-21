@@ -18,14 +18,23 @@ public class Player extends Actor{
     boolean istUnterwegs = false;
     boolean istImZiel = false;
 
+    public int startPosition;
+    
+    int start = 1;
+
     public void act(){
-        animate();
-        System.out.println("Zustand: " + (istZuhause ? "ZUHAUSE" : istUnterwegs ? "UNTERWEGS" : "IM ZIEL"));
-        Greenfoot.delay(30);
-        
         List<Tile_Map> currentTiles = getIntersectingObjects(Tile_Map.class);
+        int feldNr = currentTiles.get(0).getFeldNumber();
+        if (start == 1){
+            startPosition = feldNr;
+            System.out.println("Feld: " + startPosition);
+            start+=1;
+        }
+        
+        
+        animate();
+        
         if (!currentTiles.isEmpty()){
-                    int feldNr = currentTiles.get(0).getFeldNumber();
                     
                     if (feldNr >= 41 && feldNr <= 56){
                         istZuhause = true;
@@ -52,6 +61,10 @@ public class Player extends Actor{
                 move(rolledNumber);
                 dice.setIsClicked(false);
                 
+                List<Player> players = getIntersectingObjects(Player.class);
+                if (!players.isEmpty()){
+                    players.get(0).geheHeim();
+                }
             }
         }
     }
@@ -73,6 +86,9 @@ public class Player extends Actor{
         }
         
         setImage(idleImages[1]); // Erstellt ein Start Bild
+        
+        
+        
     }
     
     public void move(int schritte){
@@ -119,6 +135,13 @@ public class Player extends Actor{
     
     public int getPosition() {
         return position;
+    }
+    
+    public void geheHeim(){
+        moveToTile(startPosition);
+        istZuhause = true;
+        istUnterwegs = false;
+        istImZiel = false;
     }
     
     public void setPosition(int neuePosition) {
