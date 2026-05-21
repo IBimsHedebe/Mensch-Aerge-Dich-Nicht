@@ -41,11 +41,10 @@ public class Game extends World
         addObject(new Tile_Map(54, "green"), 1, 10);
         addObject(new Tile_Map(55, "green"), 2, 10);
         addObject(new Tile_Map(56, "green"), 2, 11);
-        
 
         // STARTFELDER
         addObject(new Tile_Map(1, "black"), 4, 1);
-        
+
         addObject(new Tile_Map(11, "blue"), 11, 4);
 
         addObject(new Tile_Map(21, "white"), 8, 11);
@@ -82,7 +81,7 @@ public class Game extends World
         addObject(new Tile_Map(28, "blank"), 4, 8);
         addObject(new Tile_Map(29, "blank"), 3, 8);
         addObject(new Tile_Map(30, "blank"), 2, 8);
-        
+
         addObject(new Tile_Map(32, "blank"), 1, 7);
         addObject(new Tile_Map(33, "blank"), 1, 6);
         addObject(new Tile_Map(34, "blank"), 1, 5);
@@ -92,7 +91,7 @@ public class Game extends World
         addObject(new Tile_Map(38, "blank"), 4, 4);
         addObject(new Tile_Map(39, "blank"), 4, 3);
         addObject(new Tile_Map(40, "blank"), 4, 2);
-        
+
         // ZIELFELDER
         // BLACK
         addObject(new Tile_Map(57, "black"), 6, 2);
@@ -111,14 +110,13 @@ public class Game extends World
         addObject(new Tile_Map(66, "white"), 6, 9);
         addObject(new Tile_Map(67, "white"), 6, 8);
         addObject(new Tile_Map(68, "white"), 6, 7);
-        
+
         //GREEN
         addObject(new Tile_Map(69, "green"), 2, 6);
         addObject(new Tile_Map(70, "green"), 3, 6);
         addObject(new Tile_Map(71, "green"), 4, 6);
         addObject(new Tile_Map(72, "green"), 5, 6);
-        
-        
+
         //Player
         //Black
         Black_Player BlackPlayer1 = new Black_Player();
@@ -159,5 +157,9 @@ public class Game extends World
         addObject(GreenPlayer3,1,11);
         Green_Player GreenPlayer4 = new Green_Player();
         addObject(GreenPlayer4,2,11);
+        
+        // Dice
+        Dice dice = new Dice();
+        addObject(dice,6,13);
     }
 }

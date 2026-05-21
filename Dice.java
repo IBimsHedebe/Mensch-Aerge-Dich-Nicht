@@ -34,9 +34,21 @@ public class Dice extends Actor
     public void act()
     {
         if (Greenfoot.mouseClicked(this)){
+            diceRolled = true;
             randomNumber = Greenfoot.getRandomNumber(6);
             setImage(rollImages[randomNumber]);
-            diceRolled = true;
         }
+    }
+    
+    public int getRandomNumber(){
+        return this.randomNumber;
+    }
+    
+    public boolean getIsClicked(){
+        return this.diceRolled;
+    }
+    
+    public void setIsClicked(boolean clicked){
+        this.diceRolled = clicked;
     }
 }
