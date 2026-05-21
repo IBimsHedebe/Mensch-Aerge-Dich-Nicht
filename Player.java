@@ -35,7 +35,7 @@ public class Player extends Actor{
         animate();
         
         if (!currentTiles.isEmpty()){
-            int feldNr = currentTiles.get(0).getFeldNumber();
+            feldNr = currentTiles.get(0).getFeldNumber();
             
             if (feldNr >= 41 && feldNr <= 56){
                 istZuhause = true;
