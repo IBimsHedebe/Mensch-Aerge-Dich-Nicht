@@ -164,4 +164,56 @@ public class Game extends World
         Green_Player GreenPlayer4 = new Green_Player();
         addObject(GreenPlayer4,2,11);
     }
+    
+    public void pruefeGewinner()
+    {
+    if(blackHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Grau"));
+        return;
+    }
+
+    if(blueHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Blau"));
+        return;
+    }
+
+    if(greenHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Gruen"));
+        return;
+    }
+
+    if(whiteHatGewonnen())
+    {
+        Greenfoot.setWorld(new victory_screen("Weiss"));
+        return;
+    }
+    }
+    
+    public boolean blackHatGewonnen()
+    {
+    return false;
+    }
+
+    public boolean blueHatGewonnen()
+    {
+    return false;
+    }
+
+    public boolean greenHatGewonnen()
+    {
+    return false;
+    }
+
+    public boolean whiteHatGewonnen()
+    {
+    return false;
+    }
+    
+    public void act()
+    {
+    pruefeGewinner();
+    }
 }
