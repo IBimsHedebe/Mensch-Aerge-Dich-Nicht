@@ -35,21 +35,22 @@ public class Player extends Actor{
         animate();
         
         if (!currentTiles.isEmpty()){
-                    
-                    if (feldNr >= 41 && feldNr <= 56){
-                        istZuhause = true;
-                        istUnterwegs = false;
-                        istImZiel = false;
-                    } else if (feldNr >= 57 && feldNr <= 72){
-                        istZuhause = false;
-                        istUnterwegs = false;
-                        istImZiel = true;
-                    } else {
-                        istZuhause = false;
-                        istUnterwegs = true;
-                        istImZiel = false;
-                    }
-                }
+            int feldNr = currentTiles.get(0).getFeldNumber();
+            
+            if (feldNr >= 41 && feldNr <= 56){
+                istZuhause = true;
+                istUnterwegs = false;
+                istImZiel = false;
+            } else if (feldNr >= 57 && feldNr <= 72){
+                istZuhause = false;
+                istUnterwegs = false;
+                istImZiel = true;
+            } else {
+                istZuhause = false;
+                istUnterwegs = true;
+                istImZiel = false;
+            }
+        }
 
         List<Dice> dices = getWorld().getObjects(Dice.class);
         if (!dices.isEmpty()){
