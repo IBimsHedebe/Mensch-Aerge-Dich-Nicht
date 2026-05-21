@@ -16,6 +16,7 @@ public class Player extends Actor{
     
     boolean istZuhause = true;
     boolean istUnterwegs = false;
+    boolean istImZiel = false;
     
     public Player(String spriteColour){
         // Anzahl der Bilder in der Animation
