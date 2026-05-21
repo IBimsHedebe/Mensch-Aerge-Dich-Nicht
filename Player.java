@@ -1,4 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+
 
 /**
  * class Player
@@ -30,9 +32,39 @@ public class Player extends Actor{
         setImage(idleImages[1]); // Erstellt ein Start Bild
     }
     
+    public void move(int schritte){
+        List<Tile_Map> tiles = getIntersectingObjects(Tile_Map.class);
+        
+        if (!tiles.isEmpty()){
+            Tile_Map aktuellesFeld = tiles.get(0);
+            int aktuelleNummer = aktuellesFeld.getFeldNumber();
+            
+            int ziel = aktuelleNummer + schritte;
+            
+            if (ziel > 40){
+                ziel = ziel - 40;
+            }
+            
+            moveToTile(ziel);
+            System.out.println(ziel);
+        }
+    }
+    
+    private void moveToTile(int Ziel){
+        List<Tile_Map> allTiles = getWorld().getObjects(Tile_Map.class);
+        
+        for (Tile_Map tile : allTiles) {
+            if (tile.getFeldNumber() == Ziel){
+                setLocation(tile.getX(), tile.getY());
+                break;
+            }
+        }
+    }
+    
     public void act(){
         animate();
-    }
+        move(1);
+        }
     
     private void animate(){
         animationTimer ++;
